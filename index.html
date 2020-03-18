@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+<style>
+    body {
+        font-family: Roboto, Arial;
+    }
+    nav {
+        display: block;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    input {
+        border: none;
+        font-size: 16px;
+        width: 490px;
+        padding-left: 16px;
+    }
+    input:focus {
+        outline: none !important;
+    }
+    .buttons {
+        padding-top: 18px;
+        display: flex;
+        justify-content: center;
+    }
+    li {
+        display: inline;
+        padding-left: 15px;
+        font-size: 13px;
+        font-family: arial !important;
+    }
+    footer {
+        background-color: #f2f2f2;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #5f6368;
+        border-top: 1px solid #ececec;
+    }
+    .stay {
+        opacity: 0.75;
+        padding-top: 8px;
+    }
+    .gapps {
+        opacity: 0.6;
+    }
+    .stay:hover {
+        opacity: 80%;
+        text-decoration: underline;
+    }
+    .gapps:hover {
+        opacity: 100%;
+    }
+    .align_right {
+        margin-left: auto;
+        margin-right: 10px;
+        display: flex;
+    }
+    .navbar_container {
+        display: flex;
+        list-style: none;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 20px;
+        padding-left: 0;
+    }
+    .footer_container {
+        display: flex;
+        list-style: none;
+        color: #5f6368 !important;
+        margin-left: -32px;
+    }
+    .footer_stay {
+        opacity: 50%;
+        padding-right: 10px;
+    }
+    .footer_stay:hover {
+        opacity: 60%;
+        text-decoration: underline;
+    }
+    #google_search {
+        color: #5F6368;
+        background-color: #f2f2f2;
+        border: 1px #f2f2f2;
+        border-radius: 3px;
+        padding: 0px 16px;
+        margin: 11px 4px;
+        font-size: 14px;
+        height: 36px;
+    }
+    #feeling_lucky {
+        color: #5F6368;
+        background-color: #f2f2f2;
+        border: 1px #f2f2f2;
+        border-radius: 3px;
+        padding: 0px 16px;
+        margin: 11px 4px;
+        font-size: 14px;
+        height: 36px;
+    }
+    #google_search:hover {
+        color: #222;
+        background-color: #f8f8f8;
+        border: 1px #5f6368;
+        border-radius: 3px;
+        padding: 0px 16px;
+        margin: 11px 4px;
+        font-size: 14px;
+        height: 36px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+    #feeling_lucky:hover {
+        color: #222;
+        background-color: #f8f8f8;
+        border: 1px #5f6368;
+        border-radius: 3px;
+        padding: 0px 16px;
+        margin: 11px 4px;
+        font-size: 14px;
+        height: 36px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+    #searchbar_container {
+        display: flex;
+        justify-content: center;
+        height: 44px;
+        font-size: 16px;
+        border: 1px solid #dfe1e5;
+        border-radius: 24px;
+        width: 582px;
+        margin-top: 30px;
+    }
+    #searchbar_container:hover {
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        border-color: rgba(223,225,229,0);
+    }
+    #logo {
+        display: flex;
+        justify-content: center;
+    }
+    #sign_in {
+        border: 1px solid #4285f4;
+        outline: none;
+        background: linear-gradient(90deg, #4387fd, #4683ea);
+        color: #FFF;
+        display: inline-block;
+        line-height: 28px;
+        padding: 0 12px;
+        border-radius: 2px;
+    }
+    #float_container {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+    }
+    #gapps_icon {
+        width: 16px;
+        height: 16px;
+        padding-top: 7px;
+    }
+    #mag {
+        width: 16px;
+        height: 16px;
+        padding-top: 14px;
+        margin-left: -42px;
+    }
+    #mic {
+        width: 24px;
+        height: 24px;
+        padding-top: 10px;
+        margin-right: -42px;
+    }
+</style>
+<html>
+    <head>
+        <title>Google</title>
+        <link rel="favicon" href="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" />
+    </head>
+    <body>
+        <nav id="navbar">
+            <ul class="navbar_container">
+                <li class="stay"><a href="#">About</a></li>
+                <li class="stay"><a href="#">Store</a></li>
+                <div class="align_right">
+                    <li class="stay"><a href="#">Gmail</a></li>
+                    <li class="stay"><a href="#">Images</a></li>
+                    <li class="gapps"><a href="#"><img src="images/gapps.png" id="gapps_icon"/></a></li>
+                    <li><button type="submit" id="sign_in"><b>Sign in</b></button></li>
+                </div>
+            </ul>
+        </nav>
+        <div id="float_container">
+            <div id="logo">
+                <img src="images/logo.png" alt="Google Search"/>
+            </div>
+            <form>
+                <div id="search">
+                    <div id="searchbar_container">
+                        <img src="images/magnifying_glass.png" id="mag" />
+                        <input type="text" default="Search" id="searchbar">
+                        <img src="images/mic.png" id="mic" />
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" id="google_search">Google Search</button>
+                        <button type="submit" id="feeling_lucky">I'm Feeling Lucky</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <nav id="footer">
+                <ul class="footer_container">
+                    <li class="footer_stay"><a href="#">Advertising</a></li>
+                    <li class="footer_stay"><a href="#">Business</a></li>
+                    <li class="footer_stay"><a href="#">How Search works</a></li>
+                    <div class="align_right">
+                        <li class="footer_stay"><a href="#">Privacy</a></li>
+                        <li class="footer_stay"><a href="#">Terms</a></li>
+                        <li class="footer_stay"><a href="#">Settings</a></li>
+                    </div>
+
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
